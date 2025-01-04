@@ -84,13 +84,13 @@ docker ps
 docker stop <container_id>
 ```
 ##### Access container shell:
-    ```bash
+```bash
     docker exec -it <container_id> sh
-    ```
+```
 ##### View logs:
-    ```bash
+```bash
     docker logs -f <container_id>
-    ```
+```
 ## Usage
 1. Set the number of questions you want in your exam session.
 2. Click "Start Exam" to begin.
