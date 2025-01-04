@@ -75,24 +75,23 @@ You can access the live version of this app [here](https://kubernetes-security-k
     ```
 5. Open your browser and visit `http://localhost:3000` to use the application.
 #### Docker Commands Reference
-Stop the container:
+##### Stop the container:
 ```bash
 # List running containers
 docker ps
 
 # Stop the container
 docker stop <container_id>
-
-Access container shell:
-    ```
+```
+##### Access container shell:
+    ```bash
     docker exec -it <container_id> sh
     ```
-View logs:
-    ```
+##### View logs:
+    ```bash
     docker logs -f <container_id>
     ```
 ## Usage
-
 1. Set the number of questions you want in your exam session.
 2. Click "Start Exam" to begin.
 3. Answer each question and use the navigation buttons to move between questions.
