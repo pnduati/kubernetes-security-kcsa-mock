@@ -85,11 +85,11 @@ docker stop <container_id>
 ```
 ##### Access container shell:
 ```bash
-    docker exec -it <container_id> sh
+docker exec -it <container_id> sh
 ```
 ##### View logs:
 ```bash
-    docker logs -f <container_id>
+docker logs -f <container_id>
 ```
 ## Usage
 1. Set the number of questions you want in your exam session.
