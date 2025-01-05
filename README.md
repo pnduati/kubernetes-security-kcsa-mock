@@ -31,6 +31,7 @@ You can access the live version of this app [here](https://kubernetes-security-k
 
 ### Installation
 
+#### Option A: Local Installation
 1. Clone the repository:
 
     ```bash
@@ -57,8 +58,40 @@ You can access the live version of this app [here](https://kubernetes-security-k
 
 5. Open your browser and visit `http://localhost:3000` to use the application.
 
-## Usage
+#### Option B: Docker Installation
 
+3. Build the Docker container:
+    ```bash
+    docker build -t kcsa-mock .
+    ```
+4. Run the container:
+
+    ```bash
+    # For production
+    docker run -p 3000:3000 kcsa-mock
+
+    # For development with hot-reload
+    docker run -p 3000:3000 -v $(pwd):/home/app kcsa-mock
+    ```
+5. Open your browser and visit `http://localhost:3000` to use the application.
+#### Docker Commands Reference
+##### Stop the container:
+```bash
+# List running containers
+docker ps
+
+# Stop the container
+docker stop <container_id>
+```
+##### Access container shell:
+```bash
+docker exec -it <container_id> sh
+```
+##### View logs:
+```bash
+docker logs -f <container_id>
+```
+## Usage
 1. Set the number of questions you want in your exam session.
 2. Click "Start Exam" to begin.
 3. Answer each question and use the navigation buttons to move between questions.
